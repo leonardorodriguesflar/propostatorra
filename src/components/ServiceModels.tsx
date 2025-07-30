@@ -2,64 +2,37 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Cloud, Server, CheckCircle, Star } from "lucide-react";
-
 export const ServiceModels = () => {
-  const models = [
-    {
-      name: "SaaS",
-      subtitle: "Recomendado",
-      icon: Cloud,
-      description: "Infraestrutura completa em nuvem, 100% gerida pelo fornecedor",
-      features: [
-        "Hospedagem em nuvem totalmente gerida",
-        "Licenças, orquestração e manutenção incluídas",
-        "Integração via VPN fornecida pelo cliente",
-        "Execução 24/7 com logs automáticos",
-        "Suporte técnico nível 1 e 2 incluso"
-      ],
-      clientRequirements: [
-        "VPN configurada",
-        "Certificados digitais",
-        "Credenciais dos sistemas"
-      ],
-      recommended: true,
-      pricing: "Modelo de assinatura mensal",
-      investment: {
-        setup: "R$ 50.000",
-        monthly: "R$ 6.600",
-        description: "Valor baseado na complexidade e quantidade de processos automatizados"
-      }
-    },
-    {
-      name: "On-Premise",
-      subtitle: "Recursos do Cliente",
-      icon: Server,
-      description: "Infraestrutura fornecida pelo cliente com suporte para instalação",
-      features: [
-        "Infraestrutura cliente (VM + Orquestrador)",
-        "Instalação e configuração assistida",
-        "Manutenção com suporte técnico",
-        "Controle total sobre a infraestrutura",
-        "Customizações avançadas disponíveis"
-      ],
-      clientRequirements: [
-        "Máquina Virtual dedicada",
-        "Licenças RPA (cliente)",
-        "Rede e certificados",
-        "Equipe técnica interna"
-      ],
-      recommended: false,
-      pricing: "Investimento único + manutenção",
-      investment: {
-        setup: "R$ 92.000",
-        monthly: "R$ 2.200",
-        description: "Investimento inicial + manutenção mensal baseada no escopo"
-      }
+  const models = [{
+    name: "SaaS",
+    subtitle: "Recomendado",
+    icon: Cloud,
+    description: "Infraestrutura completa em nuvem, 100% gerida pelo fornecedor",
+    features: ["Hospedagem em nuvem totalmente gerida", "Licenças, orquestração e manutenção incluídas", "Integração via VPN fornecida pelo cliente", "Execução 24/7 com logs automáticos", "Suporte técnico nível 1 e 2 incluso"],
+    clientRequirements: ["VPN configurada", "Certificados digitais", "Credenciais dos sistemas"],
+    recommended: true,
+    pricing: "Modelo de assinatura mensal",
+    investment: {
+      setup: "R$ 0",
+      monthly: "R$ 2.500 - R$ 8.000",
+      description: "Valor baseado na complexidade e quantidade de processos automatizados"
     }
-  ];
-
-  return (
-    <section className="py-16 px-6 bg-background">
+  }, {
+    name: "On-Premise",
+    subtitle: "Recursos do Cliente",
+    icon: Server,
+    description: "Infraestrutura fornecida pelo cliente com suporte para instalação",
+    features: ["Infraestrutura cliente (VM + Orquestrador)", "Instalação e configuração assistida", "Manutenção com suporte técnico", "Controle total sobre a infraestrutura", "Customizações avançadas disponíveis"],
+    clientRequirements: ["Máquina Virtual dedicada", "Licenças RPA (cliente)", "Rede e certificados", "Equipe técnica interna"],
+    recommended: false,
+    pricing: "Investimento único + manutenção",
+    investment: {
+      setup: "R$ 15.000 - R$ 25.000",
+      monthly: "R$ 800 - R$ 1.500",
+      description: "Investimento inicial + manutenção mensal baseada no escopo"
+    }
+  }];
+  return <section className="py-16 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-card-foreground mb-4">
@@ -71,24 +44,15 @@ export const ServiceModels = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {models.map((model, index) => (
-            <Card key={index} className={`p-8 shadow-card hover:shadow-elegant transition-all duration-300 relative ${
-              model.recommended ? 'ring-2 ring-primary bg-gradient-card' : 'bg-card'
-            }`}>
-              {model.recommended && (
-                <Badge className="absolute -top-3 left-6 bg-gradient-primary text-primary-foreground">
+          {models.map((model, index) => <Card key={index} className={`p-8 shadow-card hover:shadow-elegant transition-all duration-300 relative ${model.recommended ? 'ring-2 ring-primary bg-gradient-card' : 'bg-card'}`}>
+              {model.recommended && <Badge className="absolute -top-3 left-6 bg-gradient-primary text-primary-foreground">
                   <Star className="h-3 w-3 mr-1" />
                   Recomendado
-                </Badge>
-              )}
+                </Badge>}
 
               <div className="flex items-center gap-4 mb-6">
-                <div className={`rounded-lg p-3 ${
-                  model.recommended ? 'bg-gradient-primary' : 'bg-secondary'
-                }`}>
-                  <model.icon className={`h-8 w-8 ${
-                    model.recommended ? 'text-primary-foreground' : 'text-secondary-foreground'
-                  }`} />
+                <div className={`rounded-lg p-3 ${model.recommended ? 'bg-gradient-primary' : 'bg-secondary'}`}>
+                  <model.icon className={`h-8 w-8 ${model.recommended ? 'text-primary-foreground' : 'text-secondary-foreground'}`} />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-card-foreground">
@@ -109,12 +73,10 @@ export const ServiceModels = () => {
                     Inclui
                   </h4>
                   <ul className="space-y-2">
-                    {model.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start gap-2 text-sm">
+                    {model.features.map((feature, featureIndex) => <li key={featureIndex} className="flex items-start gap-2 text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                         <span className="text-muted-foreground">{feature}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </div>
 
@@ -123,12 +85,10 @@ export const ServiceModels = () => {
                     Cliente Fornece
                   </h4>
                   <ul className="space-y-2">
-                    {model.clientRequirements.map((requirement, reqIndex) => (
-                      <li key={reqIndex} className="flex items-start gap-2 text-sm">
+                    {model.clientRequirements.map((requirement, reqIndex) => <li key={reqIndex} className="flex items-start gap-2 text-sm">
                         <div className="h-2 w-2 bg-muted-foreground rounded-full mt-2 flex-shrink-0" />
                         <span className="text-muted-foreground">{requirement}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </div>
 
@@ -155,17 +115,10 @@ export const ServiceModels = () => {
                   <p className="text-sm text-muted-foreground mb-4">
                     <span className="font-semibold">Modelo de Precificação:</span> {model.pricing}
                   </p>
-                  <Button 
-                    variant={model.recommended ? "gradient" : "professional"} 
-                    size="lg" 
-                    className="w-full"
-                  >
-                    Solicitar Proposta {model.name}
-                  </Button>
+                  
                 </div>
               </div>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         <div className="mt-12 bg-gradient-subtle rounded-lg p-8 text-center">
@@ -194,6 +147,5 @@ export const ServiceModels = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
