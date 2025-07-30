@@ -13,8 +13,8 @@ export const ServiceModels = () => {
     recommended: true,
     pricing: "Modelo de assinatura mensal",
     investment: {
-      setup: "R$ 0",
-      monthly: "R$ 2.500 - R$ 8.000",
+      setup: "R$ 50.000",
+      monthly: "R$ 6.600",
       description: "Valor baseado na complexidade e quantidade de processos automatizados"
     }
   }, {
@@ -27,8 +27,8 @@ export const ServiceModels = () => {
     recommended: false,
     pricing: "Investimento único + manutenção",
     investment: {
-      setup: "R$ 15.000 - R$ 25.000",
-      monthly: "R$ 800 - R$ 1.500",
+      setup: "R$ 93.000",
+      monthly: "R$ 2.700",
       description: "Investimento inicial + manutenção mensal baseada no escopo"
     }
   }];
