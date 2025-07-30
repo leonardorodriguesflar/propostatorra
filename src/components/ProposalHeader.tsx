@@ -5,7 +5,7 @@ export const ProposalHeader = () => {
         <div className="flex items-center gap-3 mb-6">
           <Building2 className="h-10 w-10" />
           <div>
-            <h1 className="text-4xl font-bold">Proposta Comercial</h1>
+            <h1 className="text-4xl font-bold">Prévia Proposta Comercial</h1>
             <p className="text-lg opacity-90">Automação do Processo de Rescisão</p>
           </div>
         </div>
