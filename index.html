@@ -1,24 +1,437 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proposta Automação RPA - Lojas TORRA</title>
-    <meta name="description" content="Proposta comercial para automação do processo de rescisão com RPA - Redução de 80% do tempo de execução" />
-    <meta name="author" content="Solução RPA" />
+    <meta name="description" content="Proposta comercial para automação do processo de rescisão com RPA - Redução de 80% do tempo de execução">
+    <meta name="author" content="Solução RPA">
+    
+    <meta property="og:title" content="Proposta Automação RPA - Lojas TORRA">
+    <meta property="og:description" content="Proposta comercial para automação do processo de rescisão com RPA - Redução de 80% do tempo de execução">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="public/favicon.ico">
+</head>
+<body class="min-h-screen bg-background">
+    <main class="min-h-screen bg-gradient-to-br from-background via-background to-muted">
+        <div id="proposal-content">
+            <!-- Header -->
+            <div class="bg-gradient-primary text-primary-foreground py-16 px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="flex items-center gap-3 mb-6">
+                        <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                        <div>
+                            <h1 class="text-4xl font-bold">Prévia Proposta Comercial</h1>
+                            <p class="text-lg opacity-90">Automação do Processo de Rescisão</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mt-8">
+                        <div class="flex items-center gap-3 bg-white/10 rounded-lg p-4">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold">Cliente</h3>
+                                <p class="opacity-90">Lojas TORRA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-3 bg-white/10 rounded-lg p-4">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold">Prazo de Implementação</h3>
+                                <p class="opacity-90">62 dias úteis</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-3 bg-white/10 rounded-lg p-4">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold">Objetivo</h3>
+                                <p class="opacity-90">Redução de 80% do tempo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <meta property="og:title" content="Proposta Automação RPA - Lojas TORRA" />
-    <meta property="og:description" content="Proposta comercial para automação do processo de rescisão com RPA - Redução de 80% do tempo de execução" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+            <!-- Project Scope -->
+            <section class="py-16 px-6 bg-background">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <div class="flex items-center justify-center gap-3 mb-4">
+                            <svg class="h-8 w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                            </svg>
+                            <h2 class="text-3xl font-bold text-foreground">Escopo do Projeto</h2>
+                        </div>
+                        <p class="text-xl text-muted-foreground">
+                            Automação completa do processo de rescisão para reduzir tempo de execução
+                        </p>
+                    </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="card p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-foreground">Processo Atual (AS-IS)</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-500 mt-1">•</span>
+                                    <span class="text-muted-foreground">Processo manual de apuração de descontos e benefícios</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-500 mt-1">•</span>
+                                    <span class="text-muted-foreground">Lançamentos manuais no sistema AP Data</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-500 mt-1">•</span>
+                                    <span class="text-muted-foreground">Emissão manual de documentos e organização</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-500 mt-1">•</span>
+                                    <span class="text-muted-foreground">Tempo médio: 4-6 horas por rescisão</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-500 mt-1">•</span>
+                                    <span class="text-muted-foreground">Alta probabilidade de erros humanos</span>
+                                </li>
+                            </ul>
+                        </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                        <div class="card p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-foreground">Processo Automatizado (TO-BE)</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 mt-1">•</span>
+                                    <span class="text-muted-foreground">Automação da apuração de descontos via RPA</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 mt-1">•</span>
+                                    <span class="text-muted-foreground">Lançamentos automáticos no AP Data</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 mt-1">•</span>
+                                    <span class="text-muted-foreground">Geração e organização automática de documentos</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 mt-1">•</span>
+                                    <span class="text-muted-foreground">Tempo médio: 45-60 minutos por rescisão</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 mt-1">•</span>
+                                    <span class="text-muted-foreground">Eliminação de erros humanos</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Timeline -->
+            <section class="py-16 px-6 bg-background">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <div class="flex items-center justify-center gap-3 mb-4">
+                            <svg class="h-8 w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            <h2 class="text-3xl font-bold text-foreground">Cronograma Detalhado</h2>
+                        </div>
+                        <p class="text-xl text-muted-foreground">
+                            Automação do Processo de Rescisão - 62 dias úteis
+                        </p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <!-- Fase 1 -->
+                        <div class="card overflow-hidden">
+                            <div class="card-header bg-muted/50 p-6">
+                                <h3 class="flex items-center gap-3 text-xl font-semibold">
+                                    <svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    Fase 1 – Planejamento e Levantamento
+                                    <span class="badge ml-auto">5 dias úteis</span>
+                                </h3>
+                            </div>
+                            <div class="p-0">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-20">Dia</th>
+                                            <th>Atividade</th>
+                                            <th class="w-48">Responsável</th>
+                                            <th class="w-48">Entrega</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-medium">1</td>
+                                            <td>Kick-off e alinhamento de escopo</td>
+                                            <td>Cliente + Fornecedor</td>
+                                            <td>Ata de reunião</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">1-2</td>
+                                            <td>Coleta de acessos, VPN e credenciais</td>
+                                            <td>Cliente</td>
+                                            <td>Lista de acessos</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">2-3</td>
+                                            <td>Levantamento detalhado do AS-IS e dados</td>
+                                            <td>Fornecedor</td>
+                                            <td>Documento revisado</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">4</td>
+                                            <td>Mapeamento TO-BE preliminar</td>
+                                            <td>Fornecedor</td>
+                                            <td>Fluxo inicial</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">5</td>
+                                            <td>Validação do TO-BE com cliente</td>
+                                            <td>Cliente + Fornecedor</td>
+                                            <td>TO-BE aprovado</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Fase 2 -->
+                        <div class="card overflow-hidden">
+                            <div class="card-header bg-muted/50 p-6">
+                                <h3 class="flex items-center gap-3 text-xl font-semibold">
+                                    <svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    Fase 2 – Desenvolvimento RPA
+                                    <span class="badge ml-auto">35 dias úteis</span>
+                                </h3>
+                            </div>
+                            <div class="p-0">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-20">Dia</th>
+                                            <th>Atividade</th>
+                                            <th class="w-48">Responsável</th>
+                                            <th class="w-48">Entrega</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-medium">6-7</td>
+                                            <td>Configuração do ambiente de desenvolvimento</td>
+                                            <td>Fornecedor</td>
+                                            <td>Ambiente configurado</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">8-12</td>
+                                            <td>Desenvolvimento da estrutura base do bot</td>
+                                            <td>Fornecedor</td>
+                                            <td>Framework do bot</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">13-18</td>
+                                            <td>Automação da apuração de descontos e benefícios</td>
+                                            <td>Fornecedor</td>
+                                            <td>Bot versão 0.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">19-24</td>
+                                            <td>Automação dos lançamentos no AP Data</td>
+                                            <td>Fornecedor</td>
+                                            <td>Bot versão 0.2</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">25-30</td>
+                                            <td>Automação da emissão e organização de documentos</td>
+                                            <td>Fornecedor</td>
+                                            <td>Bot versão 0.3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">31-34</td>
+                                            <td>Implementação de logs, notificações e indicadores</td>
+                                            <td>Fornecedor</td>
+                                            <td>Bot versão 0.4</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">35-38</td>
+                                            <td>Otimização de performance e tratamento de exceções</td>
+                                            <td>Fornecedor</td>
+                                            <td>Bot versão 0.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">39-40</td>
+                                            <td>Testes de integração completos e refinamentos</td>
+                                            <td>Fornecedor</td>
+                                            <td>Bot versão 0.6 otimizada</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Fase 3 -->
+                        <div class="card overflow-hidden">
+                            <div class="card-header bg-muted/50 p-6">
+                                <h3 class="flex items-center gap-3 text-xl font-semibold">
+                                    <svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    Fase 3 – Testes e QA/UAT
+                                    <span class="badge ml-auto">17 dias úteis</span>
+                                </h3>
+                            </div>
+                            <div class="p-0">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-20">Dia</th>
+                                            <th>Atividade</th>
+                                            <th class="w-48">Responsável</th>
+                                            <th class="w-48">Entrega</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-medium">41-45</td>
+                                            <td>Testes internos (QA) abrangentes</td>
+                                            <td>Fornecedor</td>
+                                            <td>Relatório de testes QA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">46-50</td>
+                                            <td>Testes de integração em ambiente homologação</td>
+                                            <td>Cliente + Fornecedor</td>
+                                            <td>Checklist de integração</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">51-55</td>
+                                            <td>Testes de aceitação pelo cliente (UAT)</td>
+                                            <td>Cliente + Fornecedor</td>
+                                            <td>Checklist UAT aprovado</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">56-57</td>
+                                            <td>Ajustes finais baseados em feedback</td>
+                                            <td>Fornecedor</td>
+                                            <td>Bot versão 1.0 finalizada</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Fase 4 -->
+                        <div class="card overflow-hidden">
+                            <div class="card-header bg-muted/50 p-6">
+                                <h3 class="flex items-center gap-3 text-xl font-semibold">
+                                    <svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    Fase 4 – Implantação e Go-Live
+                                    <span class="badge ml-auto">5 dias úteis</span>
+                                </h3>
+                            </div>
+                            <div class="p-0">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-20">Dia</th>
+                                            <th>Atividade</th>
+                                            <th class="w-48">Responsável</th>
+                                            <th class="w-48">Entrega</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-medium">58-59</td>
+                                            <td>Preparação do ambiente de Produção</td>
+                                            <td>Fornecedor</td>
+                                            <td>Infraestrutura validada</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">60</td>
+                                            <td>Implantação em Produção</td>
+                                            <td>Fornecedor</td>
+                                            <td>Ambiente produtivo ativo</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">61-62</td>
+                                            <td>Acompanhamento assistido (Hypercare)</td>
+                                            <td>Cliente + Fornecedor</td>
+                                            <td>Go-Live validado e aceite final</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Marcos do Projeto -->
+                    <div class="card mt-12">
+                        <div class="card-header p-6">
+                            <h3 class="flex items-center gap-3 text-xl font-semibold">
+                                <svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Marcos do Projeto
+                            </h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="flex items-center gap-3 p-4 bg-muted/30 rounded-lg">
+                                    <span class="badge font-semibold">Dia 5</span>
+                                    <span class="text-sm">TO-BE aprovado pelo cliente</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 bg-muted/30 rounded-lg">
+                                    <span class="badge font-semibold">Dia 40</span>
+                                    <span class="text-sm">Bot completo em ambiente de desenvolvimento</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 bg-muted/30 rounded-lg">
+                                    <span class="badge font-semibold">Dia 57</span>
+                                    <span class="text-sm">UAT aprovado e versão 1.0 finalizada</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 bg-muted/30 rounded-lg">
+                                    <span class="badge font-semibold">Dia 62</span>
+                                    <span class="text-sm">Go-Live concluído e aceite formal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="py-12 px-6 bg-muted text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-4 text-foreground">Pronto para automatizar seus processos?</h2>
+                <p class="text-muted-foreground mb-6">
+                    Baixe ou imprima esta proposta para análise detalhada
+                </p>
+                <button onclick="printProposal()" class="btn-primary">
+                    <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                    </svg>
+                    Imprimir / Baixar PDF
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>
