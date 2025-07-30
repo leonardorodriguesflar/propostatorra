@@ -11,11 +11,25 @@ const Index = () => {
   const downloadPDF = () => {
     const element = document.getElementById('proposal-content');
     const opt = {
-      margin: 1,
+      margin: [0.5, 0.5, 0.5, 0.5],
       filename: 'proposta-automacao-rpa.pdf',
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      html2canvas: { 
+        scale: 1,
+        useCORS: true,
+        allowTaint: true,
+        height: window.innerHeight,
+        width: window.innerWidth,
+        scrollX: 0,
+        scrollY: 0
+      },
+      jsPDF: { 
+        unit: 'mm', 
+        format: 'a4', 
+        orientation: 'portrait',
+        compress: true
+      },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
     };
     
     html2pdf().set(opt).from(element).save();
