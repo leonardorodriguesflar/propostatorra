@@ -4,15 +4,15 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/propostatorra/", //
+  // Local usa "/", Produção usa "/propostatorra/"
+  base: mode === 'production' ? '/propostatorra/' : '/',
   server: {
     host: "::",
     port: 8080,
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(), // Tagger só no modo dev
   ].filter(Boolean),
   resolve: {
     alias: {
