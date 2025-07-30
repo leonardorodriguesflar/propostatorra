@@ -1,8 +1,6 @@
 import { Building2, Calendar, FileText } from "lucide-react";
-
 export const ProposalHeader = () => {
-  return (
-    <div className="bg-gradient-primary text-primary-foreground py-16 px-6">
+  return <div className="bg-gradient-primary text-primary-foreground py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
           <Building2 className="h-10 w-10" />
@@ -25,7 +23,7 @@ export const ProposalHeader = () => {
             <Calendar className="h-6 w-6" />
             <div>
               <h3 className="font-semibold">Prazo de Implementação</h3>
-              <p className="opacity-90">45 dias úteis</p>
+              <p className="opacity-90">68 dias úteis</p>
             </div>
           </div>
           
@@ -38,6 +36,5 @@ export const ProposalHeader = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
