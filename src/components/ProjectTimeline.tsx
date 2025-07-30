@@ -17,42 +17,44 @@ const timelineData = [
   },
   {
     phase: "Fase 2 – Desenvolvimento RPA",
-    duration: "20 dias úteis",
+    duration: "35 dias úteis",
     items: [
       { day: "6-7", activity: "Configuração do ambiente de desenvolvimento", responsible: "Fornecedor", delivery: "Ambiente configurado" },
-      { day: "8-11", activity: "Automação da apuração de descontos e benefícios", responsible: "Fornecedor", delivery: "Bot versão 0.1" },
-      { day: "12-15", activity: "Automação dos lançamentos no AP Data", responsible: "Fornecedor", delivery: "Bot versão 0.2" },
-      { day: "16-19", activity: "Automação da emissão e organização de documentos", responsible: "Fornecedor", delivery: "Bot versão 0.3" },
-      { day: "20-21", activity: "Implementação de logs, notificações e indicadores", responsible: "Fornecedor", delivery: "Bot versão 0.4 (completo)" },
-      { day: "22-25", activity: "Otimização de performance e ajustes em integrações", responsible: "Fornecedor", delivery: "Bot versão 0.5 otimizada" }
+      { day: "8-12", activity: "Desenvolvimento da estrutura base do bot", responsible: "Fornecedor", delivery: "Framework do bot" },
+      { day: "13-18", activity: "Automação da apuração de descontos e benefícios", responsible: "Fornecedor", delivery: "Bot versão 0.1" },
+      { day: "19-24", activity: "Automação dos lançamentos no AP Data", responsible: "Fornecedor", delivery: "Bot versão 0.2" },
+      { day: "25-30", activity: "Automação da emissão e organização de documentos", responsible: "Fornecedor", delivery: "Bot versão 0.3" },
+      { day: "31-34", activity: "Implementação de logs, notificações e indicadores", responsible: "Fornecedor", delivery: "Bot versão 0.4" },
+      { day: "35-38", activity: "Otimização de performance e tratamento de exceções", responsible: "Fornecedor", delivery: "Bot versão 0.5" },
+      { day: "39-40", activity: "Testes de integração completos e refinamentos", responsible: "Fornecedor", delivery: "Bot versão 0.6 otimizada" }
     ]
   },
   {
     phase: "Fase 3 – Testes e QA/UAT",
-    duration: "12 dias úteis",
+    duration: "17 dias úteis",
     items: [
-      { day: "26-29", activity: "Testes internos (QA)", responsible: "Fornecedor", delivery: "Relatório de testes QA" },
-      { day: "30-33", activity: "Testes de integração em ambiente homologação", responsible: "Cliente + Fornecedor", delivery: "Checklist de integração" },
-      { day: "34-37", activity: "Testes de aceitação pelo cliente (UAT)", responsible: "Cliente + Fornecedor", delivery: "Checklist UAT aprovado" },
-      { day: "38", activity: "Ajustes finais baseados em feedback", responsible: "Fornecedor", delivery: "Bot versão 1.0 finalizada" }
+      { day: "41-45", activity: "Testes internos (QA) abrangentes", responsible: "Fornecedor", delivery: "Relatório de testes QA" },
+      { day: "46-50", activity: "Testes de integração em ambiente homologação", responsible: "Cliente + Fornecedor", delivery: "Checklist de integração" },
+      { day: "51-55", activity: "Testes de aceitação pelo cliente (UAT)", responsible: "Cliente + Fornecedor", delivery: "Checklist UAT aprovado" },
+      { day: "56-57", activity: "Ajustes finais baseados em feedback", responsible: "Fornecedor", delivery: "Bot versão 1.0 finalizada" }
     ]
   },
   {
     phase: "Fase 4 – Implantação e Go-Live",
     duration: "5 dias úteis",
     items: [
-      { day: "39", activity: "Preparação do ambiente de Produção", responsible: "Fornecedor", delivery: "Infraestrutura validada" },
-      { day: "40", activity: "Implantação em Produção", responsible: "Fornecedor", delivery: "Ambiente produtivo ativo" },
-      { day: "41-42", activity: "Acompanhamento assistido (Hypercare)", responsible: "Cliente + Fornecedor", delivery: "Go-Live validado e aceite final" }
+      { day: "58-59", activity: "Preparação do ambiente de Produção", responsible: "Fornecedor", delivery: "Infraestrutura validada" },
+      { day: "60", activity: "Implantação em Produção", responsible: "Fornecedor", delivery: "Ambiente produtivo ativo" },
+      { day: "61-62", activity: "Acompanhamento assistido (Hypercare)", responsible: "Cliente + Fornecedor", delivery: "Go-Live validado e aceite final" }
     ]
   }
 ];
 
 const milestones = [
   { day: "Dia 5", description: "TO-BE aprovado pelo cliente" },
-  { day: "Dia 21", description: "Bot completo em ambiente de desenvolvimento" },
-  { day: "Dia 37", description: "UAT aprovado e versão 1.0 finalizada" },
-  { day: "Dia 42", description: "Go-Live concluído e aceite formal" }
+  { day: "Dia 40", description: "Bot completo em ambiente de desenvolvimento" },
+  { day: "Dia 57", description: "UAT aprovado e versão 1.0 finalizada" },
+  { day: "Dia 62", description: "Go-Live concluído e aceite formal" }
 ];
 
 export const ProjectTimeline = () => {
@@ -65,7 +67,7 @@ export const ProjectTimeline = () => {
             <h2 className="text-3xl font-bold text-foreground">Cronograma Detalhado</h2>
           </div>
           <p className="text-xl text-muted-foreground">
-            Automação do Processo de Rescisão - 42 dias úteis
+            Automação do Processo de Rescisão - 62 dias úteis
           </p>
         </div>
 

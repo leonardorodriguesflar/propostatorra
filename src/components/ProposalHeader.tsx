@@ -23,7 +23,7 @@ export const ProposalHeader = () => {
             <Calendar className="h-6 w-6" />
             <div>
               <h3 className="font-semibold">Prazo de Implementação</h3>
-              <p className="opacity-90">68 dias úteis</p>
+              <p className="opacity-90">62 dias úteis</p>
             </div>
           </div>
           
