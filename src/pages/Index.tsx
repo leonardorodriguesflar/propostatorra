@@ -9,30 +9,39 @@ import { FileDown, Mail, Phone } from "lucide-react";
 import html2pdf from "html2pdf.js";
 const Index = () => {
   const downloadPDF = () => {
-    const element = document.getElementById('proposal-content');
-    const opt = {
-      margin: [0.5, 0.5, 0.5, 0.5],
-      filename: 'proposta-automacao-rpa.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { 
-        scale: 1,
-        useCORS: true,
-        allowTaint: true,
-        height: window.innerHeight,
-        width: window.innerWidth,
-        scrollX: 0,
-        scrollY: 0
-      },
-      jsPDF: { 
-        unit: 'mm', 
-        format: 'a4', 
-        orientation: 'portrait',
-        compress: true
-      },
-      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-    };
+    // Cria uma nova janela com apenas o conteúdo da proposta
+    const printContent = document.getElementById('proposal-content');
+    const printWindow = window.open('', '_blank');
     
-    html2pdf().set(opt).from(element).save();
+    printWindow.document.write(`
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Proposta de Automação RPA</title>
+          <link rel="stylesheet" href="/src/index.css">
+          <script src="https://cdn.tailwindcss.com"></script>
+          <style>
+            @media print {
+              body { -webkit-print-color-adjust: exact; }
+              .no-print { display: none; }
+              .page-break { page-break-before: always; }
+            }
+            body { font-family: Inter, sans-serif; }
+          </style>
+        </head>
+        <body class="bg-white">
+          ${printContent.innerHTML}
+        </body>
+      </html>
+    `);
+    
+    printWindow.document.close();
+    
+    // Aguarda carregar e dispara impressão
+    printWindow.onload = () => {
+      printWindow.print();
+      setTimeout(() => printWindow.close(), 1000);
+    };
   };
 
   return <div className="min-h-screen bg-background">
@@ -61,7 +70,7 @@ const Index = () => {
           className="bg-white text-primary hover:bg-white/90"
         >
           <FileDown className="mr-2 h-5 w-5" />
-          Baixar Proposta em PDF
+          Imprimir Proposta
         </Button>
       </div>
     </section>
