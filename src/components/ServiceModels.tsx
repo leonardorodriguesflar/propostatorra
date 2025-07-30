@@ -51,7 +51,7 @@ export const ServiceModels = () => {
       recommended: false,
       pricing: "Investimento único + manutenção",
       investment: {
-        setup: "R$ 15.000 - R$ 25.000",
+        setup: "R$ 40.000",
         monthly: "R$ 800 - R$ 1.500",
         description: "Investimento inicial + manutenção mensal baseada no escopo"
       }
