@@ -4,6 +4,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { ServiceModels } from "@/components/ServiceModels";
 import { ProcessFlow } from "@/components/ProcessFlow";
 import { RpaToolsComparison } from "@/components/RpaToolsComparison";
+import { ProjectTimeline } from "@/components/ProjectTimeline";
 import { Button } from "@/components/ui/button";
 import { FileDown, Mail, Phone } from "lucide-react";
 import html2pdf from "html2pdf.js";
@@ -52,6 +53,7 @@ const Index = () => {
       <ServiceModels />
       <ProcessFlow />
       <RpaToolsComparison />
+      <ProjectTimeline />
     </div>
       
     {/* Call to Action Footer */}
