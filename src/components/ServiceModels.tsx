@@ -23,7 +23,12 @@ export const ServiceModels = () => {
         "Credenciais dos sistemas"
       ],
       recommended: true,
-      pricing: "Modelo de assinatura mensal"
+      pricing: "Modelo de assinatura mensal",
+      investment: {
+        setup: "R$ 0",
+        monthly: "R$ 2.500 - R$ 8.000",
+        description: "Valor baseado na complexidade e quantidade de processos automatizados"
+      }
     },
     {
       name: "On-Premise",
@@ -44,7 +49,12 @@ export const ServiceModels = () => {
         "Equipe técnica interna"
       ],
       recommended: false,
-      pricing: "Investimento único + manutenção"
+      pricing: "Investimento único + manutenção",
+      investment: {
+        setup: "R$ 15.000 - R$ 25.000",
+        monthly: "R$ 800 - R$ 1.500",
+        description: "Investimento inicial + manutenção mensal baseada no escopo"
+      }
     }
   ];
 
@@ -120,6 +130,25 @@ export const ServiceModels = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-card-foreground mb-3">
+                    Investimento
+                  </h4>
+                  <div className="bg-gradient-subtle rounded-lg p-4 space-y-3">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-muted-foreground">Setup inicial:</span>
+                      <span className="font-semibold text-card-foreground">{model.investment.setup}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-muted-foreground">Valor mensal:</span>
+                      <span className="font-semibold text-card-foreground">{model.investment.monthly}</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground italic pt-2 border-t border-border">
+                      {model.investment.description}
+                    </p>
+                  </div>
                 </div>
 
                 <div className="pt-4 border-t border-border">
