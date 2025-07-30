@@ -25,7 +25,7 @@ export const RpaToolsComparison = () => {
     {
       name: "Power Automate Desktop",
       strengths: "Integração nativa com Microsoft 365 e Power Platform",
-      observation: "Ótimo custo-benefício para clientes Microsoft",
+      observation: "Bom custo-benefício para clientes Microsoft",
       rating: 4,
       icon: DollarSign,
       category: "Microsoft",
@@ -54,7 +54,7 @@ export const RpaToolsComparison = () => {
   const conclusions = [
     {
       model: "SaaS",
-      tools: "Automation Anywhere e Roquetbot",
+      tools: "Falar",
       reason: "Facilidade de integração e custo operacional"
     },
     {
